@@ -32,6 +32,7 @@
       title        : 'Colors : Blacks',
       desc         : 'Soft plastics: Black and Black n Blue<br>Hard Plastics : Silver, Gold, or Black',
       requirements : (data) => {return data.feel == 'w'},
+      //image        : image.src = `https://bestbassfishinglures.com/wp-content/uploads/2018/01/bass-jigs.jpg`
     },
     dark : {
       title        : 'Colors : Darks',
@@ -47,19 +48,19 @@
     lipless_crankbait : {
       title        : 'Lipless Crankbait',
       desc         : 'For covering shallow water quickly, there isn’t much better than a lipless crankbait. They combine vibration, noise, and speed in a way that triggers arm-rocking strikes. Lipless cranks are effective anytime bass are actively feeding and excel around shallow grass, in spawning areas, and whenever fish are schooling on shad.',
-      requirements : (data) => {return ['m','ff'].indexOf(data.gender) > -1 && data.wind != 'hw'},
+      requirements : (data) => {return ['m','ff'].indexOf(data.gender) > -1 && data.wind != 'hw' && data.time != 'dawn' && data.time != 'dusk'},
     },
     squarebill : {
       title        : 'Squarebill Crankbait',
       desc         : 'Historically more of a niche bait of the Carolinas and Florida, in the last 15 years the square bill has been without a doubt the fastest growing segment of the hard bait industry. That’s because they catch big bass. Square bills are the spinnerbaits of rip rap. The bill shape allows them to crawl over rocks effectively and deflect in a way that the big ones can’t resist.',
-      requirements : (data) => {return ['m','ff'].indexOf(data.gender) > -1 && data.intensity != 'l'},
+      requirements : (data) => {return ['m','ff'].indexOf(data.gender) > -1 && data.intensity != 'l' && data.time != 'dawn' && data.time != 'dusk'},
       //requirements : (data) => {return data.conditions != 'r'},
     },
     jerkbait : {
    
       title        : 'Jerkbait',
       desc         : 'Jerkbaits are shaped like minnows, look like minnows, and act like wounded minnows. Bass like to eat wounded minnows; therefore jerkbaits catch lots of bass. As simple as that sounds, there’s really not much more to it than that. Jerkbaits shine especially well in cold water, and will catch more bass than almost any other presentation when the mercury drops.',
-      requirements : (data) => {return ['m'].indexOf(data.gender) > -1 && data.wind != 'hw'},
+      requirements : (data) => {return ['m','f'].indexOf(data.gender) > -1 && data.wind != 'hw' && data.time != 'dawn' && data.time != 'dusk'},
       //url          : 'https://www.runnersworld.com/content/hats/'
     },
     texas_rig : {
@@ -107,7 +108,7 @@
     buzzbait : {
       title        : 'Buzzbait',
       desc         : 'Fishing a buzzbait just might be the most exciting style of bass fishing there is. They are one of the best topwater lures you can tie on, and any bass fisherman will agree that there is nothing like seeing a bass explode on a topwater lure.',
-      requirements : (data) => {return ['pc','o'].indexOf(data.conditions) > -1 || data.wind == 'hw'},
+      requirements : (data) => {return ['dawn','dusk'].indexOf(data.time) > -1 || data.gender == 'f'},
       //requirements : (data) => {return ['dawn','dusk'].indexOf(data.time) > -1 || data.gender == 'f'},
       //url          : 'https://www.runnersworld.com/content/hats/'
     },
@@ -121,7 +122,7 @@
     ned_rig : {
       title        : 'Ned Rig',
       desc         : 'The Ned rig with Ned rig soft plastics has quickly become unstoppable in its unrelenting dominance of the light line finesse fishing soft stickbait category. It began as a rather niche freshwater finesse technique in the Midwest, mainly for smallmouth bass. However, it has now exploded into its own unique soft plastic sub-category. ',
-      requirements : (data) => {return data.wind != 'hw'},
+      requirements : (data) => {return data.wind != 'hw' && data.intensity != 'l'},
       //url          : 'https://www.runnersworld.com/content/hats/'
     },
     frog : {
@@ -142,49 +143,47 @@
       title        : 'Whopper Plopper',
       desc         : 'Whopper ploppers are one of the easiest lures to fish. One, the most effective way to fish them is simply reeling them in a straight retrieve the way you would fish any prop bait. The motion of the bait gliding across the surface is what creates the tail to spin and make the “plopping” noise.',
      // url          : 'https://www.runnersworld.com/content/jackets/'
-      requirements : (data) => {return data.intensity != 'n'},
+      requirements : (data) => {return ['dawn','dusk'].indexOf(data.time) > -1 || data.intensity == 'l'},
+    }
+  };
+  // text values for results text
+  const text_values = {
+    gender : {
+      m : 'SPRING',
+      f : 'SUMMER',
+      ff: 'FALL'
+    },
+    conditions : {
+      c  : 'SUNNY',
+      pc : 'PARTLY CLOUDY',
+      o  : 'CLOUDY',
+      r  : 'RAINY',
+    },
+    wind : {
+      lw : 'LIGHT WIND',
+      hw : 'STRONG WIND',
+    },
+    time : {
+      dawn  : 'MORNING',
+      day   : 'DAY',
+      dusk  : 'EVENING',
+    },
+    intensity : {
+       n  : 'fishing in a POND/LAKE',
+      l  : 'fishing in a CREEK/RIVER',
+    },
+    feel : {
+      c  : 'with CLEAR WATER',
+      ib  : 'with STAINED WATER',
+      w  : 'with MUDDY WATER',
     }
   };
 
-
-  // text values for results text
-  const text_values = {
-    gender: {
-      m: 'SPRING',
-      f: 'SUMMER',
-      ff: 'FALL' },
-
-    conditions: {
-      c: 'SUNNY',
-      pc: 'PARTLY CLOUDY',
-      o: 'CLOUDY',
-      r: 'RAINY' },
-
-    wind: {
-      lw: 'LIGHT WIND',
-      hw: 'STRONG WIND' },
-
-    time: {
-      dawn: 'MORNING',
-      day: 'DAY',
-      dusk: 'EVENING' },
-
-    intensity: {
-      n: 'fishing in a POND/LAKE',
-      l: 'fishing in a CREEK/RIVER' },
-
-    feel: {
-      c: 'with CLEAR WATER',
-      ib: 'with STAINED WATER',
-      w: 'with MUDDY WATER' } };
-
-
-
-  const form = document.getElementById('wtw-form');
+  const form      = document.getElementById('wtw-form');
   const form_wrap = document.getElementById('form-wrap');
-  const errors = document.getElementById('form-error');
-  const results = document.getElementById('results');
-  const fields = form.querySelectorAll('select');
+  const errors    = document.getElementById('form-error');
+  const results   = document.getElementById('results');
+  const fields    = form.querySelectorAll('select')
 
   /**
   * Display a form validation error
@@ -201,10 +200,10 @@
   /**
    * Safe HTML ouput
    */
-  const safetext = function (text) {
-    this.textContent = text;
-    return this.innerHTML;
-  }.bind(document.createElement('div'));
+  const safetext = (function(text){
+      this.textContent = text;
+      return this.innerHTML;
+  }).bind(document.createElement('div'));
 
   /**
    * Form submission handler
@@ -212,30 +211,30 @@
    */
   function formSubmit(e) {
     e.preventDefault();
-    console.log('submit');
+    console.log('submit')
     errors.style.display = 'none';
 
     let data = {};
     let err = 0;
     // Check for empty or invalid fields
-    [].forEach.call(fields, function (field) {
+    [].forEach.call(fields, function(field) {
       let val = field.value;
-      if (val == '') {
+      if(val == '') {
         field.classList.add('error');
         err++;
       } else {
         data[field.name] = val;
       }
     });
-    if (err) {
+    if(err) {
       return errorMessage('All fields are required');
     }
-    if (data.conditions == 's' && data.temp > 45) {
-      return errorMessage('It cannot be that warm and snowing.');
-    }
-    if (['r', 'lr'].indexOf(data.conditions) > -1 && data.temp < 30) {
-      return errorMessage('It cannot be that cold and raining.');
-    }
+    //if(data.conditions == 's' && data.temp > 45) {
+     // return errorMessage('It cannot be that warm and snowing.');
+   // }
+    //if(['r','lr'].indexOf(data.conditions) > -1 && data.temp < 30) {
+     // return errorMessage('It cannot be that cold and raining.');
+    //}
     let picks = makePicks(data);
 
     displayResults(data, picks);
