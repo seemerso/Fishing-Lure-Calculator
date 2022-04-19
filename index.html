@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Fishing Lure Calculator</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="wtw-content">
+  <div class="wtw-form-wrap" id="form-wrap">
+    <div id="form-error" style="display:none"></div>
+    <form id="wtw-form">
+      <div class="form-items"><div class="form-item"><label for="gender">Season</label><select id="gender" name="gender">
+            <option value="">- Select -</option>
+            <option value="m">Spring</option>
+            <option value="f">Summer</option>
+            <option value="ff">Fall</option>
+            </select></div>
+        <div class="form-item"><label for="conditions">Conditions</label><select id="conditions" name="conditions">
+            <option value="">- Select -</option>
+            <option value="c">Sunny</option>
+            <option value="pc">Partly Cloudy</option>
+            <option value="o">Overcast</option>
+            </select></div><div class="form-item"><label for="wind">Wind</label><select id="wind" name="wind">
+            <option value="">- Select -</option>
+            <option value="lw">Light Wind</option>
+            <option value="hw">Strong Wind</option>
+            </select></div><div class="form-item"><label for="time">Time of Day</label><select id="time" name="time">
+            <option value="">- Select -</option>
+            <option value="dawn">Morning</option>
+            <option value="day">Daytime</option>
+            <option value="dusk">Evening</option>
+            </select></div>
+        <div class="form-item"><label for="intensity">Location</label><select id="intensity" name="intensity">
+            <option value="">- Select -</option>
+            <option value="n">Pond/Lake</option>
+            <option value="l">Creek/River</option>
+            </select></div><div class="form-item"><label for="feel">Water Clarity</label><select id="feel" name="feel">
+            <option value="">- Select -</option>
+            <option value="c">Clear</option>
+            <option value="ib">Stained</option>
+            <option value="w">Muddy</option>
+            </select></div></div>
+        <button class="form-submit">Submit</button>
+    </form> 
+  </div> <!-- /.wtw-form-wrap -->
+  <div class="wtw-results-wrap" id="results" style="display:none;"></div>
+</div> <!-- /.wtw-content -->
+<!-- partial -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js"></script><script  src="./script.js"></script>
+
+</body>
+</html>

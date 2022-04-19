@@ -1,0 +1,138 @@
+.wtw-content {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.3;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.wtw-content img {
+  display: block;
+  max-width: 100%;
+}
+.wtw-content a {
+  color: #228eb5;
+  text-decoration: none;
+}
+.wtw-content a:hover {
+  color: #1a6c8a;
+}
+.wtw-content a:focus {
+  text-decoration: underline;
+}
+
+.form-item {
+  margin: 0.75rem 0;
+  position: relative;
+}
+
+.form-item label,
+.form-item select,
+button {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+
+.form-item label {
+  display: block;
+}
+
+.form-item select {
+  border-radius: 0.1875rem;
+  border: 1px solid #ccc;
+  height: 2rem;
+  width: 100%;
+  padding: 0 0.625rem;
+  background: #fff;
+  color: #444;
+  outline: 0;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  background: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8px' height='17px' viewBox='0 0 8 17' xmlns='http://www.w3.org/2000/svg' fill='%238A8A8A'%3e%3cpolygon fill='%238A8A8A' points='4 17 0 10 8 10'%3e%3c/polygon%3e%3cpolygon fill='%238A8A8A' points='4 0 0 7 8 7'%3e%3c/polygon%3e%3c/svg%3e") 99% center no-repeat;
+}
+.form-item select:hover, .form-item select:focus {
+  background-color: #f5f5f5;
+}
+.form-item select.error {
+  border-color: #c1000b;
+}
+.form-item select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+.form-item select::-ms-expand {
+  display: none;
+}
+
+.form-submit {
+  margin-top: 1.5rem;
+  background: #228eb5;
+  display: block;
+  border: 0;
+  width: 100%;
+  border-radius: 0.1875rem;
+  height: 2.25rem;
+  font-weight: 600;
+  color: #fff;
+  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+.form-submit:hover {
+  background: #1a6c8a;
+  box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+.wtw-results-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.875rem;
+}
+.wtw-results-wrap h4 {
+  font-size: 1rem;
+  margin: 0;
+}
+.wtw-results-wrap h4 + p {
+  margin-top: 0;
+}
+.wtw-results-wrap p {
+  margin: 1.5rem 0;
+}
+.wtw-results-wrap .wtw-results-intro {
+  width: 100%;
+}
+.wtw-results-wrap .wtw-results-image {
+  width: 34%;
+  max-width: 200px;
+  flex-shrink: 0;
+}
+.wtw-results-wrap .wtw-results-text {
+  flex: 1;
+}
+.wtw-results-wrap .go-back {
+  background: 0;
+  border: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  color: #228eb5;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+#rerun-button {
+  display: !important;
+}
+
+#form-error {
+  color: #fff;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: #c1000b;
+  background-color: #ffd5d5;
+  padding: 3px;
+  font-size: 0.875rem;
+}
