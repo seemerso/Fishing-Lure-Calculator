@@ -1,3 +1,7 @@
+.logo {
+  flush: left;
+}
+
 .wtw-content {
   max-width: 600px;
   margin: 0 auto;
@@ -6,8 +10,8 @@
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 .wtw-content img {
-  display: block;
-  max-width: 100%;
+  max-width: 50%;
+  float: left;
 }
 .wtw-content a {
   color: #228eb5;
@@ -50,7 +54,6 @@ button {
   -moz-appearance: none;
   -o-appearance: none;
   appearance: none;
-  background: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8px' height='17px' viewBox='0 0 8 17' xmlns='http://www.w3.org/2000/svg' fill='%238A8A8A'%3e%3cpolygon fill='%238A8A8A' points='4 17 0 10 8 10'%3e%3c/polygon%3e%3cpolygon fill='%238A8A8A' points='4 0 0 7 8 7'%3e%3c/polygon%3e%3c/svg%3e") 99% center no-repeat;
 }
 .form-item select:hover, .form-item select:focus {
   background-color: #f5f5f5;
@@ -87,10 +90,10 @@ button {
 .wtw-results-wrap {
   display: flex;
   flex-wrap: wrap;
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 .wtw-results-wrap h4 {
-  font-size: 1rem;
+  font-size: 1.25rem;
   margin: 0;
 }
 .wtw-results-wrap h4 + p {
@@ -101,11 +104,6 @@ button {
 }
 .wtw-results-wrap .wtw-results-intro {
   width: 100%;
-}
-.wtw-results-wrap .wtw-results-image {
-  width: 34%;
-  max-width: 200px;
-  flex-shrink: 0;
 }
 .wtw-results-wrap .wtw-results-text {
   flex: 1;
@@ -120,7 +118,7 @@ button {
   appearance: none;
   color: #228eb5;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 5rem;
 }
 
 #rerun-button {
