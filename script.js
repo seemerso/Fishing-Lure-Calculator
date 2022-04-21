@@ -30,25 +30,27 @@
   const items = {
     black: {
       title: 'Colors : Blacks',
-      desc: 'Soft plastics: Black and Black n Blue<br>Hard Plastics : Silver, Gold, or Black',
+      desc: '<b>Soft Plastics:<b/> Black and Black n Blue<br><b>Hard Plastics</b> : Silver, Gold, or Black',
       requirements: data => {return data.feel == 'w';}
       //image        : image.src = `https://bestbassfishinglures.com/wp-content/uploads/2018/01/bass-jigs.jpg`
     },
     dark: {
       title: 'Colors : Darks',
-      desc: 'Soft plastics: Darker greens w/ colored flakes<br>Hard Plastics: Silver or Gold',
+      desc: '<b>Soft Plastics:<b/> Darker greens w/ colored flakes<br><b>Hard Plastics</b> : Silver or Gold',
       requirements: data => {return data.feel == 'ib';} },
 
     nat: {
       title: 'Colors : Naturals',
-      desc: 'Soft plastics: Green, Brown, White, Pinks, or Chartreuse<br>Hard Plastics: Red, White, Natrural, or Translucent',
-      requirements: data => {return data.feel == 'c';} },
+      desc: '<b>Soft Plastics:<b/> Green, Brown, White, Pinks, or Chartreuse<br><b>Hard Plastics</b> : Red, White, Natrural, or Translucent',
+      requirements: data => {return data.feel == 'c';} 
+    },
 
 
     lipless_crankbait: {
       title: 'Lipless Crankbait',
       desc: 'For covering shallow water quickly, there isn’t much better than a lipless crankbait. They combine vibration, noise, and speed in a way that triggers arm-rocking strikes. Lipless cranks are effective anytime bass are actively feeding and excel around shallow grass, in spawning areas, and whenever fish are schooling on shad.',
-      requirements: data => {return ['m', 'ff'].indexOf(data.gender) > -1 && data.wind != 'hw' && data.time != 'dawn' && data.time != 'dusk' && data.intensity != 'l';} },
+      requirements: data => {return ['m', 'ff'].indexOf(data.gender) > -1 && data.wind != 'hw' && data.time != 'dawn' && data.time != 'dusk' && data.intensity != 'l';} 
+    },
 
     squarebill: {
       title: 'Squarebill Crankbait',
@@ -63,6 +65,11 @@
       requirements: data => {return ['m', 'f'].indexOf(data.gender) > -1 && data.wind != 'hw' && data.time != 'dawn' && data.time != 'dusk' && data.intensity != 'l';}
       //url          : 'https://www.runnersworld.com/content/hats/'
     },
+    crankbait: {
+      title: 'Crankbait',
+      desc: 'If it wasn’t for jigs, crankbaits would probably hold the crown for best “year-round bait”. By changing your crankbaits with the seasons and water conditions, you can always find bass willing to bite.'
+      //requirements : (data) => {return data.conditions != 'r'},
+    },
     texas_rig: {
       title: 'Texas Rig',
       desc: 'Wether you use a senko, trick worm, craw, creature bait, fish it weighted or unweighted, the Texas Rig is the most versatile bait a bass fisherman can use.'
@@ -72,12 +79,6 @@
     jig: {
       title: 'Jig',
       desc: 'Flip them, cast them, drag them, hop them, swim them – it all works. They catch bass in 40 degree water and 90 degree water, in grass, rocks, wood, and open water. You can fish them in 2 feet deep or drag the bottom in 40.'
-      //requirements : (data) => {return data.conditions != 'r'},
-    },
-
-    crankbait: {
-      title: 'Crankbait',
-      desc: 'If it wasn’t for jigs, crankbaits would probably hold the crown for best “year-round bait”. By changing your crankbaits with the seasons and water conditions, you can always find bass willing to bite.'
       //requirements : (data) => {return data.conditions != 'r'},
     },
     swimbait: {
