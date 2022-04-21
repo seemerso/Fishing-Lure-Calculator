@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Fish calc 2</title>
+  <title>CodePen - Fishing Calculator</title>
   <link rel="stylesheet" href="./style.css">
 
 </head>
@@ -27,8 +27,8 @@
             <option value="o">Overcast</option>
             </select></div><div class="form-item"><label for="wind">Wind</label><select id="wind" name="wind">
             <option value="">- Select -</option>
-            <option value="lw">Light Wind</option>
-            <option value="hw">Strong Wind</option>
+            <option value="lw">Light Wind (0-15mph)</option>
+            <option value="hw">Strong Wind (+15mph)</option>
             </select></div><div class="form-item"><label for="time">Time of Day</label><select id="time" name="time">
             <option value="">- Select -</option>
             <option value="dawn">Morning</option>
@@ -41,9 +41,9 @@
             <option value="l">Creek/River</option>
             </select></div><div class="form-item"><label for="feel">Water Clarity</label><select id="feel" name="feel">
             <option value="">- Select -</option>
-            <option value="c">Clear</option>
-            <option value="ib">Stained</option>
-            <option value="w">Muddy</option>
+            <option value="c">Clear (>4ft of visibility)</option>
+            <option value="ib">Stained (1-4ft of visibility)</option>
+            <option value="w">Muddy (<1ft of visibility)</option>
             </select></div></div>
         <button class="form-submit">Submit</button>
     </form> 
